@@ -1,6 +1,6 @@
 {
-  "name": "waiterphp/app",
-  "description": "this is waiterphp app builder",
+  "name": "app/sample",
+  "description": "this is app sample app",
   "type": "project",
   "require": {
     "smarty/smarty": "^3.1"
