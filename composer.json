@@ -1,9 +1,13 @@
 {
-  "name": "app/sample",
-  "description": "this is app sample app",
+  "name": "waiterphp/app",
+  "description": "this is waiter app framework",
   "type": "project",
   "require": {
-    "waiterphp/app-core": "^1.0.0"
+    "php": ">=5.4.0",
+    "ext-mbstring": "*",
+    "ext-ctype": "*",
+    "lib-pcre": "*",
+    "waiterphp/core": "~1.0.0"
   },
   "license": "MIT",
   "authors": [
@@ -11,5 +15,24 @@
       "name": "Tian Zheng",
       "email": "949855040@qq.com"
     }
-  ]
+  ],
+  "autoload": {
+    "psr-4": {
+      "Router\\": "routes/",
+      "Controller\\": "controllers/",
+      "Model\\": "models",
+      "Behavior\\": "behavior/",
+      "Request\\": "request/",
+      "Response\\": "response/",
+      "Service\\": "service/",
+      "Console\\": "console",
+      "\\": "lib"
+    }
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  }
 }
