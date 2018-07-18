@@ -1,6 +1,8 @@
 <?php
 namespace Request;
 
+use Waiterphp\Core\FilterTrait;
+
 class Base
 {
     public static function get()
@@ -11,4 +13,6 @@ class Base
         }
         return $instance;
     }
+
+    use FilterTrait;
 }

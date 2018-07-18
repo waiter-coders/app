@@ -5,13 +5,10 @@ namespace Request;
 
 class Web extends Base
 {
-    public function getInt($a, $b)
+    public function __construct()
     {
-        return 353543;
-    }
-
-    public function getString()
-    {
-
+        $data = $_GET + $_POST;
+        $this->setFilterData($data);
+//        $_GET = $_POST = array();
     }
 }

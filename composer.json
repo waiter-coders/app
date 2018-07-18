@@ -18,9 +18,9 @@
   ],
   "autoload": {
     "psr-4": {
-      "Router\\": "routes/",
-      "Controller\\": "controllers/",
-      "Model\\": "models",
+      "Router\\": "router/",
+      "Controller\\": "controller/",
+      "Model\\": "model",
       "Behavior\\": "behavior/",
       "Request\\": "request/",
       "Response\\": "response/",
