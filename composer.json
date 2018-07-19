@@ -7,7 +7,7 @@
     "ext-mbstring": "*",
     "ext-ctype": "*",
     "lib-pcre": "*",
-    "waiterphp/core": ">=1.0.3"
+    "waiterphp/core": ">=1.0.0"
   },
   "license": "MIT",
   "authors": [
@@ -27,12 +27,6 @@
       "Service\\": "service/",
       "Console\\": "console",
       "\\": "lib"
-    }
-  },
-  "repositories": {
-    "packagist": {
-      "type": "composer",
-      "url": "https://packagist.phpcomposer.com"
     }
   }
 }
