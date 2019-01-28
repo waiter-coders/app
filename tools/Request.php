@@ -2,7 +2,7 @@
 
 namespace Tools;
 
-use Waiterphp\Core\FilterTrait;
+use Waiterphp\Core\Filter\FilterTrait;
 
 class Request
 {

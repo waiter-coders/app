@@ -15,6 +15,6 @@ class Base extends TestCase
 
     protected function runAction($controller, $request)
     {
-        return action($controller, [$request]);
+        return action('controller.' . $controller, [$request]);
     }
 }
