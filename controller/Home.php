@@ -7,6 +7,6 @@ class Home extends \Controller\Base
 {
     public function show()
     {
-        return 12;
+        return '欢迎使用waiterphp';
     }
 }

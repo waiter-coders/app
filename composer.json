@@ -1,32 +1,35 @@
 {
   "name": "waiterphp/app",
-  "description": "this is waiter app framework",
+  "description": "waiterphp应用开发框架",
   "type": "project",
   "require": {
     "php": ">=5.4.0",
-    "ext-mbstring": "*",
-    "ext-ctype": "*",
-    "lib-pcre": "*",
-    "waiterphp/core": ">=1.0.0"
+    "waiterphp/core": ">0.0.0"
   },
   "license": "MIT",
   "authors": [
     {
-      "name": "Tian Zheng",
-      "email": "949855040@qq.com"
+      "name": "Tian Zheng"
     }
   ],
   "autoload": {
     "psr-4": {
-      "Router\\": "router/",
-      "Controller\\": "controller/",
-      "Model\\": "model",
       "Behavior\\": "behavior/",
-      "Request\\": "request/",
-      "Response\\": "response/",
+      "Controller\\": "controller/",
+      "Model\\": "model/",
+      "Router\\": "router/",
       "Service\\": "service/",
-      "Console\\": "console",
-      "\\": "lib"
+      "Tools\\": "tools/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\Behavior\\": "tests/behavior/",
+      "Tests\\Controller\\": "tests/controller/",
+      "Tests\\Model\\": "tests/model/",
+      "Tests\\Router\\": "tests/router/",
+      "Tests\\Service\\": "tests/service/",
+      "Tests\\Tools\\": "tests/tools/"
     }
   }
-}
+} 

@@ -17,4 +17,14 @@ class Base
     {
         \Waiterphp\Core\DB::transaction($callback);
     }
+
+    protected function model($class)
+    {
+        return scenes('main')->object('model.' . $class);
+    }
+
+    protected function service($class)
+    {
+        return scenes('main')->object('service.' . $class);
+    }
 }

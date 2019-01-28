@@ -1,15 +1,7 @@
 <?php
-$config = array();
+$config = [];
 
 // 添加数据库配置
-$config['database'] = loadConfig(array('database.php', 'database.local.php'), __DIR__);
-
-// 后台可管理的平台
-$config['platform'] = array(
-    1=>'平台A',
-    2=>'平台B',
-    3=>'平台C',
-    4=>'平台D'
-);
+$config['database'] = load_configs('database.php', __DIR__);
 
 return $config;
