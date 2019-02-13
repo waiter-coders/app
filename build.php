@@ -1,7 +1,22 @@
+#!/usr/bin/env php
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2018/11/19
- * Time: 16:27
- */
+require __DIR__ . '/vendor/autoload.php';
+
+$input = \Waiterphp\Core\Console\Shell::();
+$action = array_shirft($input);
+
+$dispatcher = new \Waiterphp\Builder\Dispatcher(__DIR__);
+
+// 自定义命令包
+$dispatcher->setBuilderRelative([
+
+]);
+
+// 运行代码生成器
+$input = formatInput($input);
+$dispatcher->build($action, $input);
+
+function formatInput($input)
+{
+    return $input;
+}
