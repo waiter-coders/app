@@ -4,7 +4,10 @@
   "type": "project",
   "require": {
     "php": ">=5.4.0",
-    "waiterphp/core": ">0.0.0"
+    "waiterphp/core": ">0.0.0",
+    "waiterphp/builder": ">0.0.0",
+    "waiterphp/service": ">0.0.0",
+    "waiterphp/admin": ">0.0.0"
   },
   "license": "MIT",
   "authors": [

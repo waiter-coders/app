@@ -1,0 +1,36 @@
+#!/usr/bin/env php
+<?php
+require __DIR__ . '/vendor/autoload.php';
+
+function extractParams($args)
+{
+    $params = [];
+    $selectIndex = 0;
+    while ($selectIndex < count($args)) {
+        $select = $args[$selectIndex];
+        $selectIndex++;
+        if (strncmp($select, '--', 2) == 0) {
+            $select = substr($select, 2);
+            $params[$select] = $args[$selectIndex];
+            $selectIndex++;
+        }
+    }
+    return $params;
+}
+
+// 获取命令参数
+$args = $argv;
+array_shift($args); // 弹出build
+$action = array_shift($args); // 弹出第二个参数作为操作行为
+$params = extractParams($args);
+
+// builder工具执行程序
+$dispatcher = new \Waiterphp\Builder\Dispatcher(__DIR__);
+$dispatcher->setBuilderRelative([ // 自定义命令包
+
+]);
+$dispatcher->build($action, $args);
+
+
+
+
