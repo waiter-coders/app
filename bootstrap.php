@@ -16,13 +16,8 @@ try {
     session_set_save_handler(new \Tools\Session(), true);
     session_start();
 
-    // 获取环境配置
-    $configsPaths = [__DIR__ . '/config/',  __DIR__ . '/../config'];//项目配置和个人或服务器配置
-    $configs = (isset($_ENV['app']) && is_array($_ENV['app'])) ? $_ENV['app'] : []; // php环境配置
-    $configs = array_deep_cover($configs, load_configs('web.php', $configsPaths));
-
-    // 设置环境配置
-    set_env($configs);
+    // 设置环境配置信息
+    set_env(load_configs([__DIR__ . '/config',  __DIR__ . '/../config']));
 }
 
 // 处理异常行为

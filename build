@@ -1,6 +1,6 @@
 #!/usr/bin/env php
 <?php
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/bootstrap.php';
 
 function extractParams($args)
 {
@@ -29,7 +29,7 @@ $dispatcher = new \Waiterphp\Builder\Dispatcher(__DIR__);
 $dispatcher->setBuilderRelative([ // 自定义命令包
 
 ]);
-$dispatcher->build($action, $args);
+$dispatcher->build($action, $params);
 
 
 
