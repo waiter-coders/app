@@ -11,7 +11,7 @@ abstract class Base
     public function __construct(Request $request)
     {
         $this->request = $request;
-        $this->router = new \Waiterphp\Core\Router();
+        $this->router = new \Waiterphp\Core\Routing\Router();
     }
 
     abstract public function route();

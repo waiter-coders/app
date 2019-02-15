@@ -15,7 +15,7 @@ class Base
 
     protected function transaction($callback)
     {
-        \Waiterphp\Core\DB::transaction($callback);
+        \Waiterphp\Core\DB\Database::transaction($callback);
     }
 
     protected function model($class)

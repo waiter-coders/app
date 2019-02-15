@@ -1,7 +1,7 @@
 <?php
 namespace Behaviors;
 
-class Base extends \Waiterphp\Framework\Event
+class Base
 {
     public function listen()
     {
