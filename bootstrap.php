@@ -10,7 +10,7 @@ try {
     require 'function.php';
 
     // 初始化会话
-    ini_set('session.save_path', realpath(__DIR__ . '/storage/tmp/session'));
+    ini_set('session.save_path', realpath(__DIR__) . '/storage/tmp/session');
     ini_set('session.gc_maxlifetime', 86400);
     ini_set('session.cookie_lifetime', 86400);
     session_set_save_handler(new \Tools\Session(), true);
@@ -22,5 +22,5 @@ try {
 
 // 处理异常行为
 catch (Exception $e) {
-    echo (new \Response\Error($e))->output();
+    echo (new \Tools\Response($e))->output();
 }
