@@ -1,11 +1,15 @@
 <?php
 namespace Controller;
 
+use \Tools\Request as Request;
+
 class Base
 {
-    public function __construct()
+    protected $request;
+
+    public function __construct($request)
     {
-        
+        $this->request = $request;
     }
 
 }
