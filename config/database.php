@@ -1,9 +1,9 @@
 <?php
 return [
     'default'=>[
-        'host'=>null,
-        'username'=>null,
-        'password'=>null,
-        'database'=>null,
+        'host'=>'127.0.0.1',
+        'username'=>'root',
+        'password'=>'',
+        'database'=>'tests',
     ],
 ];

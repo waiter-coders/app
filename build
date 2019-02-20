@@ -1,6 +1,25 @@
 #!/usr/bin/env php
 <?php
-require __DIR__ . '/bootstrap.php';
+try {
+    require __DIR__ . '/bootstrap.php';
+
+    // 获取命令参数
+    $args = $argv;
+    array_shift($args); // 弹出build
+    $action = array_shift($args); // 弹出第二个参数作为操作行为
+    $params = extractParams($args);
+
+    // builder工具执行程序
+    $dispatcher = new \Waiterphp\Builder\Dispatcher(__DIR__);
+    $dispatcher->setBuilderRelative([ // 自定义命令包
+
+    ]);
+    $dispatcher->build($action, $params);
+} catch (Exception $e) {
+    echo $e->getMessage() . "\r\n";
+}
+
+
 
 function extractParams($args)
 {
@@ -17,20 +36,6 @@ function extractParams($args)
     }
     return $params;
 }
-
-// 获取命令参数
-$args = $argv;
-array_shift($args); // 弹出build
-$action = array_shift($args); // 弹出第二个参数作为操作行为
-$params = extractParams($args);
-
-// builder工具执行程序
-$dispatcher = new \Waiterphp\Builder\Dispatcher(__DIR__);
-$dispatcher->setBuilderRelative([ // 自定义命令包
-
-]);
-$dispatcher->build($action, $params);
-
 
 
 
