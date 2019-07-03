@@ -8,6 +8,9 @@
     "waiterphp/builder": ">0.0.0",
     "waiterphp/admin": ">0.0.0"
   },
+  "require-dev": {
+    "phing/phing": "2.*"
+  },
   "license": "MIT",
   "authors": [
     {

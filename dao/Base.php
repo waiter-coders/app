@@ -1,5 +1,5 @@
 <?php
-namespace Model;
+namespace Dao;
 
 class Base
 {
