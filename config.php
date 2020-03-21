@@ -1,9 +1,4 @@
 <?php
-return [
-    'default'=>[
-        'host'=>'127.0.0.1',
-        'username'=>'root',
-        'password'=>'',
-        'database'=>'tests',
-    ],
-];
+$configs = [];
+$configs['database'] = load_configs(__DIR__ . '/config/database.php');
+return $configs;

@@ -1,7 +1,7 @@
 <?php
-namespace Router;
+namespace router;
 
-use \Tools\Request as Request;
+use request\Base as Request;
 
 abstract class Base
 {
@@ -11,7 +11,7 @@ abstract class Base
     public function __construct(Request $request)
     {
         $this->request = $request;
-        $this->router = new \Waiterphp\Core\Routing\Router();
+        $this->router = new \waiterphp\core\routing\Router();
     }
 
     abstract public function route();

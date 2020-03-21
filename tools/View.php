@@ -1,5 +1,5 @@
 <?php
-namespace Tools;
+namespace tools;
 
 class View
 {
@@ -14,7 +14,7 @@ class View
         $this->config = get('config.view');
     }
 
-    public static function fetch($template, $params = [])
+    public function fetch($template, $params = [])
     {
         $view = new \Smarty();
         $view->left_delimiter = isset($this->config['left']) ? $this->config['left'] : "{{";

@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\Controller;
+namespace Tests\controller;
 
 use Tests\TestCase;
-use Tests\Controller\Base;
+use Tests\controller\Base;
 
 
 class TestHome extends Base

@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Controller;
+namespace Tests\controller;
 
 use Tests\TestCase;
 use Tools\Request;

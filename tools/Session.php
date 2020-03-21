@@ -1,5 +1,5 @@
 <?php
-namespace Tools;
+namespace tools;
 
 class Session implements \SessionHandlerInterface
 {

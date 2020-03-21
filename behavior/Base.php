@@ -1,5 +1,5 @@
 <?php
-namespace Behaviors;
+namespace behaviors;
 
 class Base
 {

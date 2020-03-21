@@ -1,15 +1,17 @@
 <?php
-namespace Controller;
+namespace controller;
 
 use \Tools\Request as Request;
 
 class Base
 {
-    protected $request;
-
-    public function __construct($request)
+    public function __construct()
     {
         $this->request = $request;
     }
 
+    protected function service($service)
+    {
+        return instance('service.' . $service);
+    }
 }

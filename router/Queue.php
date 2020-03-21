@@ -1,6 +1,6 @@
 <?php
 
-namespace Router;
+namespace router;
 
 class Queue extends Base
 {

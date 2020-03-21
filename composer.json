@@ -3,34 +3,29 @@
   "description": "waiterphp应用开发框架",
   "type": "project",
   "require": {
-    "php": ">=5.4.0",
-    "waiterphp/core": ">0.0.0",
-    "waiterphp/builder": ">0.0.0",
-    "waiterphp/admin": ">0.0.0"
+    "php": ">=7.1.0",
+    "waiterphp/core": ">0.9.0"
   },
-  "require-dev": {
-    "phing/phing": "2.*"
+  "autoload": {
+    "files": [
+      "bootstrap.php"
+    ],
+    "psr-4": {
+        "behavior\\": "behavior/",
+        "cache\\": "cache/",
+        "controller\\": "controller/",
+        "model\\": "model/",
+        "request\\":"request/",
+        "response\\":"response/",
+        "router\\": "router/",
+        "service\\": "service/",
+        "tools\\": "tools/"
+    }
   },
   "license": "MIT",
   "authors": [
     {
       "name": "Tian Zheng"
     }
-  ],
-  "autoload": {
-    "psr-4": {
-      "Behavior\\": "behavior/",
-      "Controller\\": "controller/",
-      "Model\\": "model/",
-      "Router\\": "router/",
-      "Service\\": "service/",
-      "Tools\\": "tools/",
-      "Traits\\": "traits/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Tests\\": "tests/"
-    }
-  }
+  ]
 } 
